@@ -19,6 +19,10 @@ RUN echo "deb http://archive.ubuntu.com/ubuntu/ trusty multiverse" > /etc/apt/so
 RUN apt-get install -qq -y --no-install-recommends postfix ca-certificates libsasl2-modules python-pip supervisor
 RUN pip install j2cli
 
+# forward request and error logs to docker log collector
+RUN ln -sf /dev/stdout /var/log/mail.log \
+        && ln -sf /dev/stderr /var/log/mail.err
+
 # Add files
 ADD conf /root/conf
 
