@@ -17,7 +17,8 @@ echo $RELAY_HOST_NAME > /etc/mailname
 # Templates
 j2 /root/conf/postfix-main.cf > /etc/postfix/main.cf
 j2 /root/conf/sasl_passwd > /etc/postfix/sasl_passwd
-j2 /root/conf/postfix-virtual-regexp > /etc/postfix/virtual-regexp
+#j2 /root/conf/postfix-virtual-regexp > /etc/postfix/virtual-regexp
+j2 /root/conf/postfix-virtual-pcre > /etc/postfix/virtual-pcre
 postmap /etc/postfix/sasl_passwd
 
 # Launch

@@ -37,4 +37,5 @@ recipient_delimiter = +
 inet_interfaces = all
 inet_protocols = ipv4
 smtp_tls_CAfile = /etc/ssl/certs/ca-certificates.crt
-virtual_maps = regexp:/etc/postfix/virtual-regexp
+#virtual_maps = regexp:/etc/postfix/virtual-regexp
+virtual_maps = pcre:/etc/postfix/virtual-pcre

@@ -16,7 +16,7 @@ RUN echo "deb http://archive.ubuntu.com/ubuntu/ trusty multiverse" > /etc/apt/so
     echo "deb http://archive.ubuntu.com/ubuntu/ trusty-updates multiverse" >> /etc/apt/sources.list.d/multiverse.list && \
     apt-get update -qq
 
-RUN apt-get install -qq -y --no-install-recommends postfix ca-certificates libsasl2-modules python-pip supervisor
+RUN apt-get install -qq -y --no-install-recommends postfix postfix-pcre ca-certificates libsasl2-modules python-pip supervisor
 RUN pip install j2cli
 
 # Add files
