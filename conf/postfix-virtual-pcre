@@ -1,2 +1,2 @@
-/^([^@]+@{{ POSTFIX_OK_DOMAIN }}$/ $1
+/^([^@]+@{{ POSTFIX_OK_DOMAIN }})$/ $1
 /.+@.+/ {{ POSTFIX_DEF_EMAIL }}
